@@ -1,0 +1,72 @@
+body {
+    background: lemonchiffon;
+}
+
+.box {
+    background: white;
+    width: 800px;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    top: 200px;
+    transition-property: background, border-radius, transform;
+    transition-duration: 2s, 1s;
+    /* transition-timing-function: ease-out; */
+
+    /* keyframe */
+    animation: myAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.box>img:hover {
+    background: yellowgreen;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+}
+
+img {
+    width: 500px;
+    height: 500px;
+}
+
+/* keyframe */
+@keyframes myAnimation {
+    0% {
+        background: #fff;
+        left: 0px;
+        border-radius: 50% 0 0 0;
+        transform: rotate(0deg);
+
+    }
+
+    25% {
+        left: 400px;
+        top: 0px;
+        border-radius: 50% 50% 0 0;
+        transform: rotate(180deg);
+
+    }
+
+    50% {
+        top: 400px;
+        left: 400px;
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(360deg);
+
+    }
+
+    75% {
+        left: 0px;
+        top: 400px;
+        border-radius: 50%;
+        transform: rotate(360deg);
+
+    }
+
+    100% {
+        top: 0;
+        border-radius: 50%;
+        transform: rotate(90deg);
+    }
+}

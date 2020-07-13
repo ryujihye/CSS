@@ -1,0 +1,60 @@
+body {
+    background-color: plum;
+}
+
+.box {
+    background: #fff;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: myAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* -moz-animation-delay: 1s; */
+    /* animation-direction: reverse; */
+    border-radius: 50px;
+}
+
+@keyframes myAnimation {
+    0% {
+        background: #fff;
+        left: 0px;
+        border-radius: 50% 0 0 0;
+        transform: rotate(90deg);
+
+    }
+
+    25% {
+        background: purple;
+        left: 500px;
+        top: 0px;
+        border-radius: 50% 50% 0 0;
+        transform: rotate(90deg);
+
+    }
+
+    50% {
+        background: salmon;
+        top: 500px;
+        left: 500px;
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(90deg);
+
+    }
+
+    75% {
+        background: slateblue;
+        left: 0px;
+        top: 500px;
+        border-radius: 50%;
+        transform: rotate(90deg);
+
+    }
+
+    100% {
+        background: steelblue;
+        top: 0;
+        border-radius: 50%;
+        transform: rotate(90deg);
+    }
+}

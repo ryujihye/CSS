@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "a";
+    src: url('/font/Oswald-VariableFont_wght.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #9e78c4;
+    color: bisque;
+    font-family: "a";
+    text-shadow: 3px 5px #333;
+
+}
+
+h2 {
+    font-size: 45px;
+    /*3.2rem*/
+    font-weight: 300px;
+
+
+}
+
+.container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+
+}
+
+.container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 240px;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all 0.6s ease-in;
+    border: 2px solid bisque;
+}
+
+.bg1 {
+    background: url('../img/bg1.jpg');
+}
+
+.bg2 {
+    background: url('../img/bg2.jpg');
+
+}
+
+
+.container>div:hover {
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+.container>div:nth-child(1) {
+    grid-column: 1/4;
+
+}
+
+.container>div:nth-child(7) {
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+
+.container>div:nth-child(4) {
+    grid-column: 2/4;
+    grid-row: 2/4;
+
+}
